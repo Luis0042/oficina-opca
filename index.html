@@ -490,9 +490,21 @@
         {id: 45, montadora: "Hyundai", nome: "1.6 16v Gamma (HB20/Veloster)", cv: 128, fluxo: 1.05, vtec: 0},
         {id: 46, montadora: "Hyundai", nome: "2.0 16v Beta II (i30/Elantra)", cv: 143, fluxo: 1.05, vtec: 0},
         {id: 47, montadora: "Hyundai", nome: "3.3 V6 24v Lambda (Azera)", cv: 245, fluxo: 1.15, vtec: 0},
+       
         {id: 48, montadora: "VW", nome: "2.8 VR6 12v (Golf Mk3)", cv: 174, fluxo: 1.25, vtec: 0},
+     
         {id: 49, montadora: "Fiat", nome: "1.6 16v Torque (Palio/Siena)", cv: 106, fluxo: 1.10, vtec: 0},
+      
         {id: 50, montadora: "Honda", nome: "2.0 16v (F20C - S2000)", cv: 240, fluxo: 1.40, vtec: 1},
+     
+        {id: 51, montadora: "GM", nome: "1.4 8v (Chevette Carburado)", cv: 68, fluxo: 0.85, vtec: 0},
+        {id: 52, montadora: "GM", nome: "1.6 8v (Chevette Carburado)", cv: 73, fluxo: 0.85, vtec: 0},
+        {id: 53, montadora: "GM", nome: "2.5 8v (Opala 151 4 Cilindros)", cv: 98, fluxo: 0.90, vtec: 0},
+        {id: 54, montadora: "GM", nome: "1.8 8v (Monza/Kadett Carburado)", cv: 95, fluxo: 0.90, vtec: 0},
+        {id: 55, montadora: "GM", nome: "2.0 8v (Monza/Kadett Carburado)", cv: 110, fluxo: 0.95, vtec: 0},
+        {id: 56, montadora: "GM", nome: "2.0 8v Injetado (Kadett GSi)", cv: 121, fluxo: 1.05, vtec: 0},
+        
+        {id: 57, montadora: "Hyundai", nome: "2.4 16v Theta II (Sonata)", cv: 182, fluxo: 1.20, vtec: 0},
         
     ];
 
@@ -585,7 +597,46 @@
         {id: 65, motor_id: 43, nome: "Citroën C4 VTR 2.0 16v", peso: 1270, cx: 0.29, area: 2.10},
 
         // HONDA
-        {id: 66, motor_id: 50, nome: "Honda S2000", peso: 1250, cx: 0.33, area: 1.85}
+        {id: 66, motor_id: 50, nome: "Honda S2000", peso: 1250, cx: 0.33, area: 1.85},
+
+        // ---- OS CARROS DA SUA LISTA (E OS HOSPEDEIROS DOS NOVOS MOTORES) ----
+        
+        // --- Linha Kadett ---
+        {id: 67, motor_id: 54, nome: "Kadett SL/E 1.8 (Carburado)", peso: 1020, cx: 0.32, area: 1.95},
+        {id: 68, motor_id: 55, nome: "Kadett GS 2.0 (Carburado)", peso: 1060, cx: 0.32, area: 1.95},
+        {id: 69, motor_id: 56, nome: "Kadett GSi 2.0 (Injetado MPFI)", peso: 1080, cx: 0.30, area: 1.95},
+        {id: 70, motor_id: 7, nome: "Kadett GLS/Sport 2.0 (EFI/MPFI)", peso: 1070, cx: 0.32, area: 1.95},
+        
+        // --- Astra, Tigra e Familiares ---
+        // Astra GSi usa o ID 8 (X20XEV de 136cv) do seu banco
+        {id: 71, motor_id: 8, nome: "Astra GSi Hatch 2.0 16v", peso: 1240, cx: 0.30, area: 2.08},
+        // Astra 140cv usa o ID 13 (FlexPower R) do seu banco
+        {id: 72, motor_id: 13, nome: "Astra Hatch 2.0 8v (140cv)", peso: 1220, cx: 0.32, area: 2.08},
+        // Tigra usa a mesma base do motor do Corsa GSi (ID 4)
+        {id: 73, motor_id: 4, nome: "Tigra Coupé 1.6 16v", peso: 1050, cx: 0.31, area: 1.85},
+
+        // --- Clássicos GM de Tração Traseira ---
+        {id: 74, motor_id: 51, nome: "Chevette Hatch/Sedan 1.4", peso: 880, cx: 0.42, area: 1.80},
+        {id: 75, motor_id: 52, nome: "Chevette Hatch/Sedan 1.6", peso: 890, cx: 0.42, area: 1.80},
+        {id: 76, motor_id: 53, nome: "Opala Comodoro 2.5 (151)", peso: 1250, cx: 0.45, area: 2.00},
+
+        // --- VW Santana e Parati ---
+        // Utilizando os motores AP Mi (IDs 21 e 22) do seu banco
+        {id: 77, motor_id: 22, nome: "Santana 2.0i (Mi)", peso: 1150, cx: 0.38, area: 2.00},
+        {id: 78, motor_id: 22, nome: "Parati G2/G3 2.0i", peso: 1100, cx: 0.36, area: 1.95},
+        {id: 79, motor_id: 21, nome: "Santana 1.8 (Mi)", peso: 1120, cx: 0.38, area: 2.00},
+        {id: 80, motor_id: 21, nome: "Parati G2/G3 1.8", peso: 1060, cx: 0.36, area: 1.95},
+
+        // --- Honda ---
+        // Civic G9 LXR usa o motor R18 (ID 32) do seu banco
+        {id: 81, motor_id: 32, nome: "Civic G9 LXR 1.8", peso: 1270, cx: 0.30, area: 2.12},
+
+        // --- Hyundai ---
+        {id: 82, motor_id: 57, nome: "Sonata Sedan 2.4", peso: 1470, cx: 0.28, area: 2.20},
+
+        // --- Fiat ---
+        // Palio 1.8R usa o motor GM Powertrain 1.8 (ID 37)
+        {id: 83, motor_id: 37, nome: "Palio 1.8 R", peso: 1065, cx: 0.33, area: 1.95},
     ];
 
     // ==================================================
