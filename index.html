@@ -432,211 +432,179 @@
     // 1. A NOSSA BASE DE DADOS COMPLETA (47 Motores)
     // ==================================================
     const banco_motores = [
+        // ==================================================
+    // 1. A NOSSA BASE DE DADOS COMPLETA (57 Motores)
+    // ==================================================
+    const banco_motores = [
         // ---- GM ----
         {id: 1, montadora: "GM", nome: "1.0 8v (VHC/MPFI)", cv: 71, fluxo: 1.00, vtec: 0},
-        {id: 2, montadora: "GM", nome: "1.4 8v (Econo.Flex)", cv: 105, fluxo: 1.05, vtec: 0},
-        {id: 3, montadora: "GM", nome: "1.6 8v (Corsa MPFI)", cv: 92, fluxo: 1.00, vtec: 0},
-        {id: 4, montadora: "GM", nome: "1.6 16v (Corsa GSi)", cv: 109, fluxo: 1.15, vtec: 0},
-        {id: 5, montadora: "GM", nome: "1.8 8v (Corsa/Spin)", cv: 114, fluxo: 1.05, vtec: 0},
-        {id: 6, montadora: "GM", nome: "1.8 8v (Astra/Monza)", cv: 110, fluxo: 1.05, vtec: 0}, 
-        {id: 7, montadora: "GM", nome: "2.0 8v (Vectra/Astra)", cv: 116, fluxo: 1.05, vtec: 0},
-        {id: 8, montadora: "GM", nome: "2.0 16v (X20XEV - 136cv)", cv: 136, fluxo: 1.15, vtec: 0}, 
-        {id: 9, montadora: "GM", nome: "2.0 16v (C20XE - 150cv)", cv: 150, fluxo: 1.35, vtec: 0},
-        {id: 10, montadora: "GM", nome: "2.2 8v (Vectra/Omega)", cv: 123, fluxo: 1.00, vtec: 0},
-        {id: 11, montadora: "GM", nome: "2.2 16v (Vectra)", cv: 138, fluxo: 1.15, vtec: 0},
-        {id: 12, montadora: "GM", nome: "2.0 8v FlexPower", cv: 128, fluxo: 1.08, vtec: 0},
-        {id: 13, montadora: "GM", nome: "2.0 8v FlexPower R", cv: 140, fluxo: 1.12, vtec: 0},
-        {id: 14, montadora: "GM", nome: "2.4 16v FlexPower", cv: 150, fluxo: 1.15, vtec: 0},
-        {id: 15, montadora: "GM", nome: "1.8 16v (Cruze)", cv: 144, fluxo: 1.20, vtec: 0},
-        {id: 16, montadora: "GM", nome: "4.1 12v (6 Cilindros)", cv: 168, fluxo: 1.10, vtec: 0},
-        {id: 17, montadora: "GM", nome: "3.0 12v (C30NE - Alemão)", cv: 165, fluxo: 1.20, vtec: 0}, 
+        {id: 2, montadora: "GM", nome: "1.4 8v (Chevette Carburado)", cv: 68, fluxo: 0.85, vtec: 0},
+        {id: 3, montadora: "GM", nome: "1.4 8v (Econo.Flex)", cv: 105, fluxo: 1.05, vtec: 0},
+        {id: 4, montadora: "GM", nome: "1.6 8v (Chevette Carburado)", cv: 73, fluxo: 0.85, vtec: 0},
+        {id: 5, montadora: "GM", nome: "1.6 8v (Corsa MPFI)", cv: 92, fluxo: 1.00, vtec: 0},
+        {id: 6, montadora: "GM", nome: "1.6 16v (Corsa GSi)", cv: 109, fluxo: 1.15, vtec: 0},
+        {id: 7, montadora: "GM", nome: "1.8 8v (Monza/Kadett Carburado)", cv: 95, fluxo: 0.90, vtec: 0},
+        {id: 8, montadora: "GM", nome: "1.8 8v (Corsa/Spin)", cv: 114, fluxo: 1.05, vtec: 0},
+        {id: 9, montadora: "GM", nome: "1.8 8v (Astra/Monza)", cv: 110, fluxo: 1.05, vtec: 0},
+        {id: 10, montadora: "GM", nome: "1.8 16v (Cruze)", cv: 144, fluxo: 1.20, vtec: 0},
+        {id: 11, montadora: "GM", nome: "2.0 8v (Monza/Kadett Carburado)", cv: 110, fluxo: 0.95, vtec: 0},
+        {id: 12, montadora: "GM", nome: "2.0 8v Injetado (Kadett GSi)", cv: 121, fluxo: 1.05, vtec: 0},
+        {id: 13, montadora: "GM", nome: "2.0 8v (Vectra/Astra)", cv: 116, fluxo: 1.05, vtec: 0},
+        {id: 14, montadora: "GM", nome: "2.0 8v FlexPower", cv: 128, fluxo: 1.08, vtec: 0},
+        {id: 15, montadora: "GM", nome: "2.0 8v FlexPower R", cv: 140, fluxo: 1.12, vtec: 0},
+        {id: 16, montadora: "GM", nome: "2.0 16v (X20XEV - 136cv)", cv: 136, fluxo: 1.15, vtec: 0},
+        {id: 17, montadora: "GM", nome: "2.0 16v (C20XE - 150cv)", cv: 150, fluxo: 1.35, vtec: 0},
+        {id: 18, montadora: "GM", nome: "2.2 8v (Vectra/Omega)", cv: 123, fluxo: 1.00, vtec: 0},
+        {id: 19, montadora: "GM", nome: "2.2 16v (Vectra)", cv: 138, fluxo: 1.15, vtec: 0},
+        {id: 20, montadora: "GM", nome: "2.4 16v FlexPower", cv: 150, fluxo: 1.15, vtec: 0},
+        {id: 21, montadora: "GM", nome: "2.5 8v (Opala 151 4 Cilindros)", cv: 98, fluxo: 0.90, vtec: 0},
+        {id: 22, montadora: "GM", nome: "3.0 12v (C30NE - Alemão)", cv: 165, fluxo: 1.20, vtec: 0},
+        {id: 23, montadora: "GM", nome: "4.1 12v (6 Cilindros)", cv: 168, fluxo: 1.10, vtec: 0},
 
         // ---- VW ----
-        {id: 18, montadora: "VW", nome: "1.6 8v (CHT/Carburado)", cv: 76, fluxo: 0.85, vtec: 0},
-        {id: 19, montadora: "VW", nome: "1.6 8v AP (Carburado)", cv: 85, fluxo: 1.00, vtec: 0},
-        {id: 20, montadora: "VW", nome: "1.8 8v AP (Carburado)", cv: 99, fluxo: 1.00, vtec: 0},
-        {id: 21, montadora: "VW", nome: "1.8 8v AP (Injetado - Mi)", cv: 99, fluxo: 1.02, vtec: 0},
-        {id: 22, montadora: "VW", nome: "2.0 8v AP (Injetado - Mi)", cv: 114, fluxo: 1.05, vtec: 0},
-        {id: 23, montadora: "VW", nome: "2.0 16v AP (GTI - Bolha)", cv: 145, fluxo: 1.25, vtec: 0},
         {id: 24, montadora: "VW", nome: "1.0 8v EA111 (Gol G5/G6)", cv: 76, fluxo: 1.00, vtec: 0},
-        {id: 25, montadora: "VW", nome: "1.6 8v EA111 (Gol/Polo)", cv: 104, fluxo: 1.05, vtec: 0},
+        {id: 25, montadora: "VW", nome: "1.6 8v (CHT/Carburado)", cv: 76, fluxo: 0.85, vtec: 0},
+        {id: 26, montadora: "VW", nome: "1.6 8v AP (Carburado)", cv: 85, fluxo: 1.00, vtec: 0},
+        {id: 27, montadora: "VW", nome: "1.6 8v EA111 (Gol/Polo)", cv: 104, fluxo: 1.05, vtec: 0},
+        {id: 28, montadora: "VW", nome: "1.8 8v AP (Carburado)", cv: 99, fluxo: 1.00, vtec: 0},
+        {id: 29, montadora: "VW", nome: "1.8 8v AP (Injetado - Mi)", cv: 99, fluxo: 1.02, vtec: 0},
+        {id: 30, montadora: "VW", nome: "2.0 8v AP (Injetado - Mi)", cv: 114, fluxo: 1.05, vtec: 0},
+        {id: 31, montadora: "VW", nome: "2.0 16v AP (GTI - Bolha)", cv: 145, fluxo: 1.25, vtec: 0},
+        {id: 32, montadora: "VW", nome: "2.8 VR6 12v (Golf Mk3)", cv: 174, fluxo: 1.25, vtec: 0},
 
         // ---- HONDA ----
-        {id: 26, montadora: "Honda", nome: "1.6 16v (D16Y7 - Civic LX)", cv: 106, fluxo: 1.05, vtec: 0}, 
-        {id: 27, montadora: "Honda", nome: "1.6 16v (D16Z6 - Civic Si 90s)", cv: 125, fluxo: 1.15, vtec: 1},
-        {id: 28, montadora: "Honda", nome: "1.6 16v (B16A2 - Civic VTi)", cv: 160, fluxo: 1.30, vtec: 1},
-        {id: 29, montadora: "Honda", nome: "2.0 16v (K20Z3 - Civic Si 07)", cv: 192, fluxo: 1.35, vtec: 1}, 
-        {id: 30, montadora: "Honda", nome: "2.4 16v (K24A - Accord)", cv: 160, fluxo: 1.15, vtec: 0}, 
-        {id: 31, montadora: "Honda", nome: "2.4 16v (K24Z7 - Civic Si 14)", cv: 206, fluxo: 1.28, vtec: 1}, 
-        {id: 32, montadora: "Honda", nome: "1.8 16v (R18A1 - New Civic)", cv: 140, fluxo: 1.10, vtec: 0},
         {id: 33, montadora: "Honda", nome: "1.5 16v (L15A - Fit)", cv: 116, fluxo: 1.05, vtec: 0},
+        {id: 34, montadora: "Honda", nome: "1.6 16v (D16Y7 - Civic LX)", cv: 106, fluxo: 1.05, vtec: 0},
+        {id: 35, montadora: "Honda", nome: "1.6 16v (D16Z6 - Civic Si 90s)", cv: 125, fluxo: 1.15, vtec: 1},
+        {id: 36, montadora: "Honda", nome: "1.6 16v (B16A2 - Civic VTi)", cv: 160, fluxo: 1.30, vtec: 1},
+        {id: 37, montadora: "Honda", nome: "1.8 16v (R18A1 - New Civic)", cv: 140, fluxo: 1.10, vtec: 0},
+        {id: 38, montadora: "Honda", nome: "2.0 16v (K20Z3 - Civic Si 07)", cv: 192, fluxo: 1.35, vtec: 1},
+        {id: 39, montadora: "Honda", nome: "2.0 16v (F20C - S2000)", cv: 240, fluxo: 1.40, vtec: 1},
+        {id: 40, montadora: "Honda", nome: "2.4 16v (K24A - Accord)", cv: 160, fluxo: 1.15, vtec: 0},
+        {id: 41, montadora: "Honda", nome: "2.4 16v (K24Z7 - Civic Si 14)", cv: 206, fluxo: 1.28, vtec: 1},
 
         // ---- FIAT ----
-        {id: 34, montadora: "Fiat", nome: "1.0 8v Fire (Uno/Palio)", cv: 65, fluxo: 0.95, vtec: 0},
-        {id: 35, montadora: "Fiat", nome: "1.4 8v Fire (Punto/Palio)", cv: 85, fluxo: 1.00, vtec: 0},
-        {id: 36, montadora: "Fiat", nome: "1.6 8v Sevel (Uno 1.6R)", cv: 92, fluxo: 1.05, vtec: 0},
-        {id: 37, montadora: "Fiat", nome: "1.8 8v Powertrain", cv: 114, fluxo: 1.05, vtec: 0},
-        {id: 38, montadora: "Fiat", nome: "1.8 16v Pratola Serra", cv: 132, fluxo: 1.15, vtec: 0},
-        {id: 39, montadora: "Fiat", nome: "2.0 20v Fivetech (Marea)", cv: 142, fluxo: 1.20, vtec: 0},
-        {id: 40, montadora: "Fiat", nome: "2.4 20v Fivetech (Stilo Abarth)", cv: 167, fluxo: 1.25, vtec: 0},
+        {id: 42, montadora: "Fiat", nome: "1.0 8v Fire (Uno/Palio)", cv: 65, fluxo: 0.95, vtec: 0},
+        {id: 43, montadora: "Fiat", nome: "1.4 8v Fire (Punto/Palio)", cv: 85, fluxo: 1.00, vtec: 0},
+        {id: 44, montadora: "Fiat", nome: "1.6 8v Sevel (Uno 1.6R)", cv: 92, fluxo: 1.05, vtec: 0},
+        {id: 45, montadora: "Fiat", nome: "1.6 16v Torque (Palio/Siena)", cv: 106, fluxo: 1.10, vtec: 0},
+        {id: 46, montadora: "Fiat", nome: "1.8 8v Powertrain", cv: 114, fluxo: 1.05, vtec: 0},
+        {id: 47, montadora: "Fiat", nome: "1.8 16v Pratola Serra", cv: 132, fluxo: 1.15, vtec: 0},
+        {id: 48, montadora: "Fiat", nome: "2.0 20v Fivetech (Marea)", cv: 142, fluxo: 1.20, vtec: 0},
+        {id: 49, montadora: "Fiat", nome: "2.4 20v Fivetech (Stilo Abarth)", cv: 167, fluxo: 1.25, vtec: 0},
 
         // ---- PSA ----
-        {id: 41, montadora: "PSA", nome: "1.6 16v (TU5JP4 - C4/206)", cv: 110, fluxo: 1.10, vtec: 0},
-        {id: 42, montadora: "PSA", nome: "1.8 16v (XU7JP4 - Xsara VTS 1.8)", cv: 112, fluxo: 1.10, vtec: 0},
-        {id: 43, montadora: "PSA", nome: "2.0 16v (EW10A - C4 Pallas)", cv: 143, fluxo: 1.15, vtec: 0},
-        {id: 44, montadora: "PSA", nome: "2.0 16v (XU10J4RS - Xsara 2.0)", cv: 167, fluxo: 1.30, vtec: 0},
+        {id: 50, montadora: "PSA", nome: "1.6 16v (TU5JP4 - C4/206)", cv: 110, fluxo: 1.10, vtec: 0},
+        {id: 51, montadora: "PSA", nome: "1.8 16v (XU7JP4 - Xsara VTS 1.8)", cv: 112, fluxo: 1.10, vtec: 0},
+        {id: 52, montadora: "PSA", nome: "2.0 16v (EW10A - C4 Pallas)", cv: 143, fluxo: 1.15, vtec: 0},
+        {id: 53, montadora: "PSA", nome: "2.0 16v (XU10J4RS - Xsara 2.0)", cv: 167, fluxo: 1.30, vtec: 0},
 
         // ---- HYUNDAI ----
-        {id: 45, montadora: "Hyundai", nome: "1.6 16v Gamma (HB20/Veloster)", cv: 128, fluxo: 1.05, vtec: 0},
-        {id: 46, montadora: "Hyundai", nome: "2.0 16v Beta II (i30/Elantra)", cv: 143, fluxo: 1.05, vtec: 0},
-        {id: 47, montadora: "Hyundai", nome: "3.3 V6 24v Lambda (Azera)", cv: 245, fluxo: 1.15, vtec: 0},
-       
-        {id: 48, montadora: "VW", nome: "2.8 VR6 12v (Golf Mk3)", cv: 174, fluxo: 1.25, vtec: 0},
-     
-        {id: 49, montadora: "Fiat", nome: "1.6 16v Torque (Palio/Siena)", cv: 106, fluxo: 1.10, vtec: 0},
-      
-        {id: 50, montadora: "Honda", nome: "2.0 16v (F20C - S2000)", cv: 240, fluxo: 1.40, vtec: 1},
-     
-        {id: 51, montadora: "GM", nome: "1.4 8v (Chevette Carburado)", cv: 68, fluxo: 0.85, vtec: 0},
-        {id: 52, montadora: "GM", nome: "1.6 8v (Chevette Carburado)", cv: 73, fluxo: 0.85, vtec: 0},
-        {id: 53, montadora: "GM", nome: "2.5 8v (Opala 151 4 Cilindros)", cv: 98, fluxo: 0.90, vtec: 0},
-        {id: 54, montadora: "GM", nome: "1.8 8v (Monza/Kadett Carburado)", cv: 95, fluxo: 0.90, vtec: 0},
-        {id: 55, montadora: "GM", nome: "2.0 8v (Monza/Kadett Carburado)", cv: 110, fluxo: 0.95, vtec: 0},
-        {id: 56, montadora: "GM", nome: "2.0 8v Injetado (Kadett GSi)", cv: 121, fluxo: 1.05, vtec: 0},
-        
-        {id: 57, montadora: "Hyundai", nome: "2.4 16v Theta II (Sonata)", cv: 182, fluxo: 1.20, vtec: 0},
-        
+        {id: 54, montadora: "Hyundai", nome: "1.6 16v Gamma (HB20/Veloster)", cv: 128, fluxo: 1.05, vtec: 0},
+        {id: 55, montadora: "Hyundai", nome: "2.0 16v Beta II (i30/Elantra)", cv: 143, fluxo: 1.05, vtec: 0},
+        {id: 56, montadora: "Hyundai", nome: "2.4 16v Theta II (Sonata)", cv: 182, fluxo: 1.20, vtec: 0},
+        {id: 57, montadora: "Hyundai", nome: "3.3 V6 24v Lambda (Azera)", cv: 245, fluxo: 1.15, vtec: 0},
     ];
 
     // ==================================================
-    // 2. A GARAGEM COMPLETA (57 Carros - Aero & Peso)
+    // 2. A GARAGEM COMPLETA (83 Carros - Aero & Peso)
     // ==================================================
     const banco_carros = [
-        // ---- GM ----
-        {id: 1, motor_id: 1, nome: "Celta 1.0 Hatch", peso: 890, cx: 0.33, area: 1.90},
-        {id: 2, motor_id: 1, nome: "Corsa Classic Sedan", peso: 980, cx: 0.31, area: 1.92},
-        {id: 3, motor_id: 2, nome: "Prisma G1 Sedan", peso: 935, cx: 0.34, area: 1.92},
-        {id: 4, motor_id: 3, nome: "Corsa Hatch B (Bolha)", peso: 900, cx: 0.35, area: 1.90},
-        {id: 5, motor_id: 4, nome: "Corsa GSi 16v", peso: 1020, cx: 0.34, area: 1.90},
-        {id: 6, motor_id: 5, nome: "Corsa C Hatch (Frente Montana)", peso: 1050, cx: 0.33, area: 2.00},
-        {id: 7, motor_id: 6, nome: "Astra F Hatch (Belga)", peso: 1070, cx: 0.32, area: 2.00},
-        {id: 8, motor_id: 6, nome: "Astra GL 1.8 Hatch (1998-2002)", peso: 1180, cx: 0.29, area: 2.05}, 
-        {id: 9, motor_id: 6, nome: "Astra GL 1.8 Hatch (Frente Locomotiva)", peso: 1200, cx: 0.32, area: 2.08},
-        {id: 10, motor_id: 6, nome: "Monza Classic SE Sedan (Tubarão)", peso: 1100, cx: 0.35, area: 1.95},
-        {id: 11, motor_id: 7, nome: "Vectra A 2.0", peso: 1150, cx: 0.29, area: 2.00},
-        {id: 12, motor_id: 7, nome: "Astra GL 2.0 Hatch", peso: 1180, cx: 0.29, area: 2.05},
-        {id: 13, motor_id: 8, nome: "Vectra B CD 2.0 16v", peso: 1300, cx: 0.28, area: 2.10},
-        {id: 14, motor_id: 9, nome: "Vectra A GSi 2.0 16v", peso: 1260, cx: 0.28, area: 2.00},
-        {id: 15, motor_id: 9, nome: "Calibra 2.0 16v (O Rei da Aero)", peso: 1215, cx: 0.26, area: 1.95}, 
-        {id: 16, motor_id: 11, nome: "Vectra B CD 2.2 16v", peso: 1350, cx: 0.28, area: 2.10},
-        {id: 17, motor_id: 12, nome: "Astra Hatch 2.0 FlexPower", peso: 1220, cx: 0.32, area: 2.08},
-        {id: 18, motor_id: 13, nome: "Vectra GT Hatch 2.0", peso: 1350, cx: 0.32, area: 2.15},
-        {id: 19, motor_id: 14, nome: "Vectra C Elite Sedan 2.4 16v", peso: 1390, cx: 0.30, area: 2.10},
-        {id: 20, motor_id: 16, nome: "Omega CD Sedan 4.1", peso: 1500, cx: 0.30, area: 2.20},
-        
-        // ---- VW ----
-        {id: 21, motor_id: 18, nome: "Gol Quadrado 1.6 CHT", peso: 900, cx: 0.40, area: 1.90},
-        {id: 22, motor_id: 19, nome: "Voyage Quadrado 1.6 AP", peso: 940, cx: 0.39, area: 1.90},
-        {id: 23, motor_id: 20, nome: "Gol GTS 1.8 AP Quadrado", peso: 960, cx: 0.40, area: 1.90},
-        {id: 24, motor_id: 21, nome: "Santana Mi Sedan (Tubarão)", peso: 1120, cx: 0.38, area: 2.00},
-        {id: 25, motor_id: 22, nome: "Gol GTI 2.0 8v (Bolinha)", peso: 1050, cx: 0.34, area: 1.95},
-        {id: 26, motor_id: 23, nome: "Gol GTI 2.0 16v (G2/Bolha)", peso: 1125, cx: 0.34, area: 1.95},
-        {id: 27, motor_id: 24, nome: "Gol G5/G6 1.0 EA111", peso: 1000, cx: 0.34, area: 2.00},
-        {id: 28, motor_id: 25, nome: "Polo Hatch 1.6", peso: 1150, cx: 0.33, area: 2.05},
-        {id: 29, motor_id: 25, nome: "Golf Mk4 Sportline (Sapão)", peso: 1220, cx: 0.31, area: 2.10},
+        // ---- GM (Ordem Cronológica) ----
+        {id: 1, motor_id: 2, nome: "Chevette Hatch/Sedan 1.4", peso: 880, cx: 0.42, area: 1.80},
+        {id: 2, motor_id: 4, nome: "Chevette Hatch/Sedan 1.6", peso: 890, cx: 0.42, area: 1.80},
+        {id: 3, motor_id: 21, nome: "Opala Comodoro 2.5 (151)", peso: 1250, cx: 0.45, area: 2.00},
+        {id: 4, motor_id: 9, nome: "Monza Classic SE Sedan (Tubarão)", peso: 1100, cx: 0.35, area: 1.95},
+        {id: 5, motor_id: 7, nome: "Kadett SL/E 1.8 (Carburado)", peso: 1020, cx: 0.32, area: 1.95},
+        {id: 6, motor_id: 11, nome: "Kadett GS 2.0 (Carburado)", peso: 1060, cx: 0.32, area: 1.95},
+        {id: 7, motor_id: 12, nome: "Kadett GSi 2.0 (Injetado MPFI)", peso: 1080, cx: 0.30, area: 1.95},
+        {id: 8, motor_id: 13, nome: "Kadett GLS/Sport 2.0 (EFI/MPFI)", peso: 1070, cx: 0.32, area: 1.95},
+        {id: 9, motor_id: 18, nome: "Omega GLS Sedan 2.2 8v", peso: 1420, cx: 0.30, area: 2.20},
+        {id: 10, motor_id: 22, nome: "Omega CD Sedan 3.0 12v", peso: 1470, cx: 0.30, area: 2.20},
+        {id: 11, motor_id: 23, nome: "Omega CD Sedan 4.1", peso: 1500, cx: 0.30, area: 2.20},
+        {id: 12, motor_id: 13, nome: "Vectra A 2.0", peso: 1150, cx: 0.29, area: 2.00},
+        {id: 13, motor_id: 17, nome: "Vectra A GSi 2.0 16v", peso: 1260, cx: 0.28, area: 2.00},
+        {id: 14, motor_id: 17, nome: "Calibra 2.0 16v (O Rei da Aero)", peso: 1215, cx: 0.26, area: 1.95},
+        {id: 15, motor_id: 5, nome: "Corsa Hatch B (Bolha)", peso: 900, cx: 0.35, area: 1.90},
+        {id: 16, motor_id: 6, nome: "Corsa GSi 16v", peso: 1020, cx: 0.34, area: 1.90},
+        {id: 17, motor_id: 6, nome: "Tigra Coupé 1.6 16v", peso: 1050, cx: 0.31, area: 1.85},
+        {id: 18, motor_id: 1, nome: "Corsa Classic Sedan", peso: 980, cx: 0.31, area: 1.92},
+        {id: 19, motor_id: 16, nome: "Vectra B CD 2.0 16v", peso: 1300, cx: 0.28, area: 2.10},
+        {id: 20, motor_id: 19, nome: "Vectra B CD 2.2 16v", peso: 1350, cx: 0.28, area: 2.10},
+        {id: 21, motor_id: 18, nome: "Vectra GL/GLS 2.2 8v", peso: 1280, cx: 0.28, area: 2.10},
+        {id: 22, motor_id: 9, nome: "Astra F Hatch (Belga)", peso: 1070, cx: 0.32, area: 2.00},
+        {id: 23, motor_id: 9, nome: "Astra GL 1.8 Hatch (1998-2002)", peso: 1180, cx: 0.29, area: 2.05},
+        {id: 24, motor_id: 9, nome: "Astra GL 1.8 Hatch (Frente Locomotiva)", peso: 1200, cx: 0.32, area: 2.08},
+        {id: 25, motor_id: 13, nome: "Astra GL 2.0 Hatch", peso: 1180, cx: 0.29, area: 2.05},
+        {id: 26, motor_id: 16, nome: "Astra GSi Hatch 2.0 16v", peso: 1240, cx: 0.30, area: 2.08},
+        {id: 27, motor_id: 14, nome: "Astra Hatch 2.0 FlexPower", peso: 1220, cx: 0.32, area: 2.08},
+        {id: 28, motor_id: 15, nome: "Astra Hatch 2.0 8v (140cv)", peso: 1220, cx: 0.32, area: 2.08},
+        {id: 29, motor_id: 1, nome: "Celta 1.0 Hatch", peso: 890, cx: 0.33, area: 1.90},
+        {id: 30, motor_id: 3, nome: "Prisma G1 Sedan", peso: 935, cx: 0.34, area: 1.92},
+        {id: 31, motor_id: 8, nome: "Corsa C Hatch (Frente Montana)", peso: 1050, cx: 0.33, area: 2.00},
+        {id: 32, motor_id: 15, nome: "Vectra GT Hatch 2.0", peso: 1350, cx: 0.32, area: 2.15},
+        {id: 33, motor_id: 20, nome: "Vectra C Elite Sedan 2.4 16v", peso: 1390, cx: 0.30, area: 2.10},
+        {id: 34, motor_id: 10, nome: "Cruze Sedan 1.8 16v", peso: 1400, cx: 0.31, area: 2.15},
+        {id: 35, motor_id: 10, nome: "Cruze Sport6 Hatch 1.8 16v", peso: 1410, cx: 0.32, area: 2.15},
 
-        // ---- HONDA ----
-        {id: 30, motor_id: 26, nome: "Civic LX G6 Sedan", peso: 1080, cx: 0.32, area: 1.95},
-        {id: 31, motor_id: 27, nome: "Civic Si Coupe (1995)", peso: 1060, cx: 0.32, area: 1.95},
-        {id: 32, motor_id: 28, nome: "Civic VTi EG6 Hatch", peso: 1080, cx: 0.32, area: 1.95},
-        {id: 33, motor_id: 29, nome: "Civic Si G8 Sedan (2007)", peso: 1322, cx: 0.31, area: 2.10},
-        {id: 34, motor_id: 30, nome: "Accord Sedan 2.4", peso: 1490, cx: 0.30, area: 2.15},
-        {id: 35, motor_id: 31, nome: "Civic Si G9 Coupe (2014)", peso: 1350, cx: 0.31, area: 2.12},
-        {id: 36, motor_id: 32, nome: "New Civic Sedan 1.8 16v", peso: 1240, cx: 0.31, area: 2.10},
-        {id: 37, motor_id: 33, nome: "Honda Fit Hatch", peso: 1080, cx: 0.34, area: 2.15},
-        
-        // ---- FIAT ----
-        {id: 38, motor_id: 34, nome: "Uno Quadrado Mille Fire", peso: 850, cx: 0.36, area: 1.85},
-        {id: 39, motor_id: 34, nome: "Novo Uno Hatch (Vivace)", peso: 900, cx: 0.36, area: 1.95},
-        {id: 40, motor_id: 35, nome: "Punto Hatch 1.4", peso: 1140, cx: 0.33, area: 2.10},
-        {id: 41, motor_id: 36, nome: "Uno 1.6R Quadrado", peso: 920, cx: 0.36, area: 1.85},
-        {id: 42, motor_id: 37, nome: "Stilo Hatch 1.8 8v", peso: 1280, cx: 0.32, area: 2.10},
-        {id: 43, motor_id: 38, nome: "Brava HGT Hatch 1.8 16v", peso: 1190, cx: 0.33, area: 2.05},
-        {id: 44, motor_id: 39, nome: "Marea Sedan 2.0 20v Fivetech", peso: 1330, cx: 0.31, area: 2.10},
-        {id: 45, motor_id: 39, nome: "Marea Weekend Perua 20v", peso: 1380, cx: 0.33, area: 2.15},
-        {id: 46, motor_id: 40, nome: "Stilo Abarth Hatch 2.4 20v", peso: 1315, cx: 0.32, area: 2.10},
+        // ---- VW (Ordem Cronológica) ----
+        {id: 36, motor_id: 25, nome: "Gol Quadrado 1.6 CHT", peso: 900, cx: 0.40, area: 1.90},
+        {id: 37, motor_id: 26, nome: "Voyage Quadrado 1.6 AP", peso: 940, cx: 0.39, area: 1.90},
+        {id: 38, motor_id: 28, nome: "Gol GTS 1.8 AP Quadrado", peso: 960, cx: 0.40, area: 1.90},
+        {id: 39, motor_id: 29, nome: "Santana 1.8 (Mi)", peso: 1120, cx: 0.38, area: 2.00},
+        {id: 40, motor_id: 30, nome: "Santana 2.0i (Mi)", peso: 1150, cx: 0.38, area: 2.00},
+        {id: 41, motor_id: 30, nome: "Santana Mi Sedan (Tubarão)", peso: 1120, cx: 0.38, area: 2.00},
+        {id: 42, motor_id: 30, nome: "Gol GTI 2.0 8v (Bolinha)", peso: 1050, cx: 0.34, area: 1.95},
+        {id: 43, motor_id: 31, nome: "Gol GTI 2.0 16v (G2/Bolha)", peso: 1125, cx: 0.34, area: 1.95},
+        {id: 44, motor_id: 29, nome: "Parati G2/G3 1.8", peso: 1060, cx: 0.36, area: 1.95},
+        {id: 45, motor_id: 30, nome: "Parati G2/G3 2.0i", peso: 1100, cx: 0.36, area: 1.95},
+        {id: 46, motor_id: 32, nome: "Golf VR6 Mk3", peso: 1285, cx: 0.32, area: 2.05},
+        {id: 47, motor_id: 27, nome: "Golf Mk4 Sportline (Sapão)", peso: 1220, cx: 0.31, area: 2.10},
+        {id: 48, motor_id: 27, nome: "Polo Hatch 1.6", peso: 1150, cx: 0.33, area: 2.05},
+        {id: 49, motor_id: 24, nome: "Gol G5/G6 1.0 EA111", peso: 1000, cx: 0.34, area: 2.00},
 
-        // ---- PSA ----
-        {id: 47, motor_id: 41, nome: "Peugeot 206 Hatch 1.6", peso: 1025, cx: 0.33, area: 1.95},
-        {id: 48, motor_id: 41, nome: "Citroën C4 Hatch 1.6", peso: 1220, cx: 0.31, area: 2.10},
-        {id: 49, motor_id: 42, nome: "Citroën Xsara VTS Hatch 1.8", peso: 1150, cx: 0.32, area: 2.00},
-        {id: 50, motor_id: 43, nome: "Citroën C4 Pallas Sedan 2.0", peso: 1350, cx: 0.30, area: 2.15},
-        {id: 51, motor_id: 44, nome: "Citroën Xsara VTS Hatch 2.0", peso: 1190, cx: 0.32, area: 2.00},
-        {id: 52, motor_id: 44, nome: "Peugeot 206 RC Hatch 2.0", peso: 1100, cx: 0.33, area: 1.95},
+        // ---- HONDA (Ordem Cronológica) ----
+        {id: 50, motor_id: 35, nome: "Civic Si Coupe (1995)", peso: 1060, cx: 0.32, area: 1.95},
+        {id: 51, motor_id: 36, nome: "Civic VTi EG6 Hatch", peso: 1080, cx: 0.32, area: 1.95},
+        {id: 52, motor_id: 34, nome: "Civic LX G6 Sedan", peso: 1080, cx: 0.32, area: 1.95},
+        {id: 53, motor_id: 39, nome: "Honda S2000", peso: 1250, cx: 0.33, area: 1.85},
+        {id: 54, motor_id: 33, nome: "Honda Fit Hatch", peso: 1080, cx: 0.34, area: 2.15},
+        {id: 55, motor_id: 37, nome: "New Civic Sedan 1.8 16v", peso: 1240, cx: 0.31, area: 2.10},
+        {id: 56, motor_id: 38, nome: "Civic Si G8 Sedan (2007)", peso: 1322, cx: 0.31, area: 2.10},
+        {id: 57, motor_id: 40, nome: "Accord Sedan 2.4", peso: 1490, cx: 0.30, area: 2.15},
+        {id: 58, motor_id: 37, nome: "Civic G9 LXR 1.8", peso: 1270, cx: 0.30, area: 2.12},
+        {id: 59, motor_id: 41, nome: "Civic Si G9 Coupe (2014)", peso: 1350, cx: 0.31, area: 2.12},
 
-        // ---- HYUNDAI ----
-        {id: 53, motor_id: 45, nome: "HB20 Hatch 1.6", peso: 1040, cx: 0.32, area: 2.05},
-        {id: 54, motor_id: 45, nome: "Veloster Hatch 1.6", peso: 1170, cx: 0.32, area: 2.08},
-        {id: 55, motor_id: 46, nome: "i30 Hatch G1 2.0", peso: 1320, cx: 0.33, area: 2.15},
-        {id: 56, motor_id: 46, nome: "Elantra Sedan 2.0", peso: 1250, cx: 0.29, area: 2.10},
-        {id: 57, motor_id: 47, nome: "Azera Sedan 3.3 V6", peso: 1620, cx: 0.29, area: 2.25},
-       
-        {id: 58, motor_id: 17, nome: "Omega CD Sedan 3.0 12v", peso: 1470, cx: 0.30, area: 2.20},
-        {id: 59, motor_id: 15, nome: "Cruze Sedan 1.8 16v", peso: 1400, cx: 0.31, area: 2.15},
-        {id: 60, motor_id: 15, nome: "Cruze Sport6 Hatch 1.8 16v", peso: 1410, cx: 0.32, area: 2.15},
-        {id: 61, motor_id: 10, nome: "Vectra GL/GLS 2.2 8v", peso: 1280, cx: 0.28, area: 2.10},
-        {id: 62, motor_id: 10, nome: "Omega GLS Sedan 2.2 8v", peso: 1420, cx: 0.30, area: 2.20},
+        // ---- FIAT (Ordem Cronológica) ----
+        {id: 60, motor_id: 42, nome: "Uno Quadrado Mille Fire", peso: 850, cx: 0.36, area: 1.85},
+        {id: 61, motor_id: 44, nome: "Uno 1.6R Quadrado", peso: 920, cx: 0.36, area: 1.85},
+        {id: 62, motor_id: 45, nome: "Palio 1.6 16v", peso: 1020, cx: 0.33, area: 1.95},
+        {id: 63, motor_id: 47, nome: "Brava HGT Hatch 1.8 16v", peso: 1190, cx: 0.33, area: 2.05},
+        {id: 64, motor_id: 48, nome: "Marea Sedan 2.0 20v Fivetech", peso: 1330, cx: 0.31, area: 2.10},
+        {id: 65, motor_id: 48, nome: "Marea Weekend Perua 20v", peso: 1380, cx: 0.33, area: 2.15},
+        {id: 66, motor_id: 46, nome: "Stilo Hatch 1.8 8v", peso: 1280, cx: 0.32, area: 2.10},
+        {id: 67, motor_id: 49, nome: "Stilo Abarth Hatch 2.4 20v", peso: 1315, cx: 0.32, area: 2.10},
+        {id: 68, motor_id: 46, nome: "Palio 1.8 R", peso: 1065, cx: 0.33, area: 1.95},
+        {id: 69, motor_id: 43, nome: "Punto Hatch 1.4", peso: 1140, cx: 0.33, area: 2.10},
+        {id: 70, motor_id: 42, nome: "Novo Uno Hatch (Vivace)", peso: 900, cx: 0.36, area: 1.95},
 
-        // VW
-        {id: 63, motor_id: 48, nome: "Golf VR6 Mk3", peso: 1285, cx: 0.32, area: 2.05},
-        
-        // FIAT
-        {id: 64, motor_id: 49, nome: "Palio 1.6 16v", peso: 1020, cx: 0.33, area: 1.95},
+        // ---- PSA (Ordem Cronológica) ----
+        {id: 71, motor_id: 51, nome: "Citroën Xsara VTS Hatch 1.8", peso: 1150, cx: 0.32, area: 2.00},
+        {id: 72, motor_id: 53, nome: "Citroën Xsara VTS Hatch 2.0", peso: 1190, cx: 0.32, area: 2.00},
+        {id: 73, motor_id: 50, nome: "Peugeot 206 Hatch 1.6", peso: 1025, cx: 0.33, area: 1.95},
+        {id: 74, motor_id: 53, nome: "Peugeot 206 RC Hatch 2.0", peso: 1100, cx: 0.33, area: 1.95},
+        {id: 75, motor_id: 50, nome: "Citroën C4 Hatch 1.6", peso: 1220, cx: 0.31, area: 2.10},
+        {id: 76, motor_id: 52, nome: "Citroën C4 VTR 2.0 16v", peso: 1270, cx: 0.29, area: 2.10},
+        {id: 77, motor_id: 52, nome: "Citroën C4 Pallas Sedan 2.0", peso: 1350, cx: 0.30, area: 2.15},
 
-        // PSA (Aproveitando o motor 2.0 16v que já estava no código)
-        {id: 65, motor_id: 43, nome: "Citroën C4 VTR 2.0 16v", peso: 1270, cx: 0.29, area: 2.10},
-
-        // HONDA
-        {id: 66, motor_id: 50, nome: "Honda S2000", peso: 1250, cx: 0.33, area: 1.85},
-
-        // ---- OS CARROS DA SUA LISTA (E OS HOSPEDEIROS DOS NOVOS MOTORES) ----
-        
-        // --- Linha Kadett ---
-        {id: 67, motor_id: 54, nome: "Kadett SL/E 1.8 (Carburado)", peso: 1020, cx: 0.32, area: 1.95},
-        {id: 68, motor_id: 55, nome: "Kadett GS 2.0 (Carburado)", peso: 1060, cx: 0.32, area: 1.95},
-        {id: 69, motor_id: 56, nome: "Kadett GSi 2.0 (Injetado MPFI)", peso: 1080, cx: 0.30, area: 1.95},
-        {id: 70, motor_id: 7, nome: "Kadett GLS/Sport 2.0 (EFI/MPFI)", peso: 1070, cx: 0.32, area: 1.95},
-        
-        // --- Astra, Tigra e Familiares ---
-        // Astra GSi usa o ID 8 (X20XEV de 136cv) do seu banco
-        {id: 71, motor_id: 8, nome: "Astra GSi Hatch 2.0 16v", peso: 1240, cx: 0.30, area: 2.08},
-        // Astra 140cv usa o ID 13 (FlexPower R) do seu banco
-        {id: 72, motor_id: 13, nome: "Astra Hatch 2.0 8v (140cv)", peso: 1220, cx: 0.32, area: 2.08},
-        // Tigra usa a mesma base do motor do Corsa GSi (ID 4)
-        {id: 73, motor_id: 4, nome: "Tigra Coupé 1.6 16v", peso: 1050, cx: 0.31, area: 1.85},
-
-        // --- Clássicos GM de Tração Traseira ---
-        {id: 74, motor_id: 51, nome: "Chevette Hatch/Sedan 1.4", peso: 880, cx: 0.42, area: 1.80},
-        {id: 75, motor_id: 52, nome: "Chevette Hatch/Sedan 1.6", peso: 890, cx: 0.42, area: 1.80},
-        {id: 76, motor_id: 53, nome: "Opala Comodoro 2.5 (151)", peso: 1250, cx: 0.45, area: 2.00},
-
-        // --- VW Santana e Parati ---
-        // Utilizando os motores AP Mi (IDs 21 e 22) do seu banco
-        {id: 77, motor_id: 22, nome: "Santana 2.0i (Mi)", peso: 1150, cx: 0.38, area: 2.00},
-        {id: 78, motor_id: 22, nome: "Parati G2/G3 2.0i", peso: 1100, cx: 0.36, area: 1.95},
-        {id: 79, motor_id: 21, nome: "Santana 1.8 (Mi)", peso: 1120, cx: 0.38, area: 2.00},
-        {id: 80, motor_id: 21, nome: "Parati G2/G3 1.8", peso: 1060, cx: 0.36, area: 1.95},
-
-        // --- Honda ---
-        // Civic G9 LXR usa o motor R18 (ID 32) do seu banco
-        {id: 81, motor_id: 32, nome: "Civic G9 LXR 1.8", peso: 1270, cx: 0.30, area: 2.12},
-
-        // --- Hyundai ---
-        {id: 82, motor_id: 57, nome: "Sonata Sedan 2.4", peso: 1470, cx: 0.28, area: 2.20},
-
-        // --- Fiat ---
-        // Palio 1.8R usa o motor GM Powertrain 1.8 (ID 37)
-        {id: 83, motor_id: 37, nome: "Palio 1.8 R", peso: 1065, cx: 0.33, area: 1.95},
+        // ---- HYUNDAI (Ordem Cronológica) ----
+        {id: 78, motor_id: 57, nome: "Azera Sedan 3.3 V6", peso: 1620, cx: 0.29, area: 2.25},
+        {id: 79, motor_id: 55, nome: "i30 Hatch G1 2.0", peso: 1320, cx: 0.33, area: 2.15},
+        {id: 80, motor_id: 55, nome: "Elantra Sedan 2.0", peso: 1250, cx: 0.29, area: 2.10},
+        {id: 81, motor_id: 56, nome: "Sonata Sedan 2.4", peso: 1470, cx: 0.28, area: 2.20},
+        {id: 82, motor_id: 54, nome: "HB20 Hatch 1.6", peso: 1040, cx: 0.32, area: 2.05},
+        {id: 83, motor_id: 54, nome: "Veloster Hatch 1.6", peso: 1170, cx: 0.32, area: 2.08},
+    ];
     ];
 
     // ==================================================
