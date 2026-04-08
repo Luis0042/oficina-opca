@@ -193,13 +193,11 @@
         }
 
         /* Os Mostradores Circulares Brancos (The G OPC Soul) */
-
-        
         .dials-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
+            justify-items: center;
         }
 
         .dial {
@@ -315,22 +313,11 @@
             display: none;
         }
 
-@media (max-width: 800px) {
-            .form-grid, .mid-display {
+        @media (max-width: 800px) {
+            .form-grid, .dials-container, .mid-display {
                 grid-template-columns: 1fr;
             }
-        }
-
-        @media (max-width: 600px) {
-            .dial { 
-                width: 200px; 
-                height: 200px; 
-                border-width: 10px; /* Aro mais fino no celular */
-            }
-            .dial-label { font-size: 1.2em; }
-            .dial-value { font-size: 1.8em; }
-            .dial-title { font-size: 0.7em; }
-            .needle { height: 80px; } /* Ponteiro menor */
+            .dial { width: 250px; height: 250px; }
         }
     </style>
 </head>
@@ -399,7 +386,7 @@
             <p id="resCarroNome">-</p>
         </div>
         
-      <div class="dials-container">
+        <div class="dials-container">
             <div class="dial">
                 <div class="dial-label dial-label-zero">0</div>
                 <div class="dial-label dial-label-mid">250</div>
@@ -407,15 +394,6 @@
                 <div class="dial-title">Cavalagem (CV)</div>
                 <div class="dial-value" id="resCv">0</div>
                 <div class="needle" id="needlePotencia"></div>
-            </div>
-
-            <div class="dial">
-                <div class="dial-label dial-label-zero">0</div>
-                <div class="dial-label dial-label-mid">50</div>
-                <div class="dial-label dial-label-max">100+</div>
-                <div class="dial-title">Torque (kgfm)</div>
-                <div class="dial-value" id="resTorque">0</div>
-                <div class="needle" id="needleTorque"></div>
             </div>
 
             <div class="dial">
@@ -449,6 +427,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 <script>
     // ==================================================
@@ -650,7 +630,7 @@
         selectMotor.disabled = false;
     }
 
-function carregarCarros() {
+    function carregarCarros() {
         const motorId = parseInt(document.getElementById("motor").value);
         const selectCarro = document.getElementById("carro");
         
@@ -662,16 +642,11 @@ function carregarCarros() {
         }
 
         const carrosFiltrados = banco_carros.filter(c => c.motor_id === motorId);
-        
-        // Nova Lógica: Alerta amigável se não achar chassi
-        if (carrosFiltrados.length === 0) {
-            selectCarro.innerHTML = '<option value="">Nenhum chassi encontrado para este motor na nossa garagem. Quer sugerir um?</option>';
-            selectCarro.disabled = true;
-        } else {
-            carrosFiltrados.forEach(c => {
-                selectCarro.innerHTML += `<option value="${c.id}">${c.nome} (${c.peso}kg)</option>`;
-            });
-            selectCarro.disabled = false;
+        carrosFiltrados.forEach(c => {
+            selectCarro.innerHTML += `<option value="${c.id}">${c.nome} (${c.peso}kg)</option>`;
+        });
+
+        selectCarro.disabled = false;
     }
 
     function atualizarStages() {
@@ -694,7 +669,7 @@ function carregarCarros() {
         }
     }
 
-function calcularFisica() {
+    function calcularFisica() {
         const carroId = parseInt(document.getElementById("carro").value);
         const motorId = parseInt(document.getElementById("motor").value);
         const tipo = document.getElementById("tipoTuning").value;
@@ -709,48 +684,30 @@ function calcularFisica() {
         const carro = banco_carros.find(c => c.id === carroId);
 
         let cv_final = 0;
-        let custo_base = 0;
+        let custo = 0;
+        let nome_stage = "";
         let bonus_vtec = motor.vtec ? 1.10 : 1.0;
 
         if (tipo === "1") {
-            if (stage === 1) { cv_final = motor.cv + ((motor.cv * 0.10) * motor.fluxo); custo_base = 2700; }
-            if (stage === 2) { cv_final = motor.cv + ((motor.cv * 0.22) * motor.fluxo * bonus_vtec); custo_base = 5800; }
-            if (stage === 3) { cv_final = motor.cv + ((motor.cv * 0.35) * motor.fluxo * bonus_vtec); custo_base = 10500; }
-            if (stage === 4) { cv_final = motor.cv + ((motor.cv * 0.55) * motor.fluxo * bonus_vtec); custo_base = 22000; }
+            if (stage === 1) { cv_final = motor.cv + ((motor.cv * 0.10) * motor.fluxo); custo = 2700; nome_stage = "Stg 1 AsPRO"; }
+            if (stage === 2) { cv_final = motor.cv + ((motor.cv * 0.22) * motor.fluxo * bonus_vtec); custo = 5800; nome_stage = "Stg 2 AsPRO"; }
+            if (stage === 3) { cv_final = motor.cv + ((motor.cv * 0.35) * motor.fluxo * bonus_vtec); custo = 10500; nome_stage = "Stg 3 AsPRO"; }
+            if (stage === 4) { cv_final = motor.cv + ((motor.cv * 0.55) * motor.fluxo * bonus_vtec); custo = 22000; nome_stage = "Stg 4 Extrem"; }
         } else {
-            if (stage === 1) { cv_final = motor.cv + ((motor.cv * 0.5) * motor.fluxo); custo_base = 12900; }
-            if (stage === 2) { cv_final = motor.cv + ((motor.cv * 1.0) * motor.fluxo); custo_base = 13650; }
-            if (stage === 3) { cv_final = motor.cv + ((motor.cv * 1.5) * motor.fluxo); custo_base = 26000; }
+            if (stage === 1) { cv_final = motor.cv + ((motor.cv * 0.5) * motor.fluxo); custo = 12900; nome_stage = "Stg 1 Turbo"; }
+            if (stage === 2) { cv_final = motor.cv + ((motor.cv * 1.0) * motor.fluxo); custo = 13650; nome_stage = "Stg 2 Turbo"; }
+            if (stage === 3) { cv_final = motor.cv + ((motor.cv * 1.5) * motor.fluxo); custo = 26000; nome_stage = "Stg 3 Forjado"; }
         }
 
-        // Custo dinâmico (Fica mais caro se for VTEC e dependendo do Fluxo)
-        let custo = custo_base * motor.fluxo * (motor.vtec ? 1.25 : 1.0);
-
-        // Cálculo de Torque Dinâmico em Kgfm
-        // Baseado na sugestão (cv * 1.35 * fluxo), convertido de Nm para kgfm (~ / 10)
-        let torque_kgfm = (cv_final * 1.35 * motor.fluxo) / 9.81;
-        if (tipo === "2") torque_kgfm *= 1.35; // Turbos tem um pico de torque muito maior
-
-        // FÍSICA VMAX CORRIGIDA
-        let fator_eficiencia = 0.85; 
-        if (tipo === "2" || stage === 4) {
-            fator_eficiencia = 0.72; // Perda maior na transmissão em potência extrema
-        }
-        
-        let potencia_watts = cv_final * 735.5 * fator_eficiencia; 
+        // FÍSICA
+        let potencia_watts = cv_final * 735.5 * 0.85; 
         let arrasto = 0.5 * 1.225 * carro.cx * carro.area;
         let vmax_ms = Math.cbrt(potencia_watts / arrasto); 
         let vmax_kmh = vmax_ms * 3.6;
 
-        // FÍSICA 0-100 CORRIGIDA
         let relacao_peso = carro.peso / cv_final;
         let zero_cem = (relacao_peso * 0.55) + 2.5;
         let destracionando = false;
-        
-        // Punição por falta de tração em carros fortes (curva não linear)
-        if (cv_final > 220) {
-            zero_cem += (cv_final - 220) * 0.012;
-        }
         
         if (cv_final > 250) {
             zero_cem += 0.8;
@@ -759,46 +716,45 @@ function calcularFisica() {
 
         // PREENCHENDO O CLUSTER (Resultados)
         document.getElementById("resCarroNome").innerText = carro.nome.toUpperCase();
+        
+        // Atualiza números rápidos
         document.getElementById("resPeso").innerText = carro.peso;
         document.getElementById("resZeroCem").innerText = zero_cem.toFixed(2);
         document.getElementById("resCx").innerText = carro.cx.toFixed(2);
-        document.getElementById("resCusto").innerText = "R$ " + custo.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        document.getElementById("resCusto").innerText = "R$ " + custo.toLocaleString('pt-BR', {minimumFractionDigits: 2});
+
+        // Alerta de tração
         document.getElementById("alertaTracao").style.display = destracionando ? "block" : "none";
 
-        // ANIMAÇÃO DOS MOSTRADORES
+        // ANIMAÇÃO DOS MOSTRADORES (Soul of the G OPC)
         const resCvTxt = document.getElementById("resCv");
         const resVmaxTxt = document.getElementById("resVmax");
-        const resTorqueTxt = document.getElementById("resTorque"); // Novo
-
         const needlePotencia = document.getElementById("needlePotencia");
         const needleVmax = document.getElementById("needleVmax");
-        const needleTorque = document.getElementById("needleTorque"); // Novo
 
-        // Rotação Potência (-120 a +120)
+        // O painel do Astra começa em -120deg e vai até +120deg (240 graus total)
+        // Mapeamos os valores para a rotação do ponteiro
+
+        // Potência: Mapeia de 0-500 CV para -120deg a +120deg
         let rotPotencia = (cv_final / 500) * 240 - 120;
-        if (rotPotencia > 120) rotPotencia = 130; 
+        if (rotPotencia > 120) rotPotencia = 130; // Ponteiro "bate" no fim
 
-        // Rotação Torque (Mapeado de 0 a 100 kgfm)
-        let rotTorque = (torque_kgfm / 100) * 240 - 120;
-        if (rotTorque > 120) rotTorque = 130;
-
-        // Rotação Vmax
+        // Vmax: Mapeia de 100-300 Km/h para -120deg a +120deg
+        // (A Vmax começa em 100 no mostrador para dar visual de carro rápido)
         let rotVmax = ((vmax_kmh - 100) / 200) * 240 - 120;
         if (rotVmax < -120) rotVmax = -120;
         if (rotVmax > 120) rotVmax = 130;
 
-        // Aplica a rotação CSS
+        // Aplica a rotação
         needlePotencia.style.transform = `translateX(-50%) rotate(${rotPotencia}deg)`;
-        needleTorque.style.transform = `translateX(-50%) rotate(${rotTorque}deg)`;
         needleVmax.style.transform = `translateX(-50%) rotate(${rotVmax}deg)`;
 
         // Conta os números digitais
         contarNumero(resCvTxt, Math.round(cv_final));
-        contarNumero(resTorqueTxt, Math.round(torque_kgfm));
         contarNumero(resVmaxTxt, Math.round(vmax_kmh));
 
+        // Mostra o painel
         document.getElementById("painelResultados").style.display = "block";
-    }
     }
 
     // Função auxiliar para contar o número no digital
