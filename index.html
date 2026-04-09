@@ -717,10 +717,11 @@
             if (stage === 2) { cv_final = motor.cv + ((motor.cv * 0.22) * motor.fluxo * bonus_vtec); custo = 5800; nome_stage = "Stg 2 AsPRO"; }
             if (stage === 3) { cv_final = motor.cv + ((motor.cv * 0.35) * motor.fluxo * bonus_vtec); custo = 10500; nome_stage = "Stg 3 AsPRO"; }
             if (stage === 4) { cv_final = motor.cv + ((motor.cv * 0.55) * motor.fluxo * bonus_vtec); custo = 22000; nome_stage = "Stg 4 Extrem"; }
-        } else {
-            if (stage === 1) { cv_final = motor.cv + ((motor.cv * 0.5) * motor.fluxo); custo = 12900; nome_stage = "Stg 1 Turbo"; }
-            if (stage === 2) { cv_final = motor.cv + ((motor.cv * 1.0) * motor.fluxo); custo = 13650; nome_stage = "Stg 2 Turbo"; }
-            if (stage === 3) { cv_final = motor.cv + ((motor.cv * 1.5) * motor.fluxo); custo = 26000; nome_stage = "Stg 3 Forjado"; }
+      } else {
+            // Agora o comando variável (Honda e Sandero RS) ajuda a empurrar a turbina!
+            if (stage === 1) { cv_final = motor.cv + ((motor.cv * 0.5) * motor.fluxo * bonus_vtec); custo = 12900; nome_stage = "Stg 1 Turbo"; }
+            if (stage === 2) { cv_final = motor.cv + ((motor.cv * 1.0) * motor.fluxo * bonus_vtec); custo = 13650; nome_stage = "Stg 2 Turbo"; }
+            if (stage === 3) { cv_final = motor.cv + ((motor.cv * 1.5) * motor.fluxo * bonus_vtec); custo = 26000; nome_stage = "Stg 3 Forjado"; }
         }
 
         // FÍSICA
